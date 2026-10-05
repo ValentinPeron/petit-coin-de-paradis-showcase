@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Petit Coin de Paradis — Pistes graphiques</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bordeaux: #7A1F33; --ardoise: #2B3136; --ardoise-mer: #4A5F69;
+    --lin: #F7F1E6; --blanc: #FFFDF9; --pierre: #DCCDB2; --iroise: #0E3A53;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--lin); color: var(--ardoise); font: 400 1.0625rem/1.6 Figtree, system-ui, sans-serif; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 48px 16px 0; }
+  header { text-align: center; }
+  header img { width: min(320px, 80%); height: auto; }
+  h1 { font: 400 clamp(1.75rem, 4vw, 2.5rem)/1.2 "Bree Serif", Georgia, serif; color: var(--bordeaux); margin: 32px 0 8px; }
+  .lead { max-width: 640px; margin: 0 auto; color: var(--ardoise-mer); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 48px 0; }
+  .card { display: flex; flex-direction: column; background: var(--blanc); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; border: 1px solid var(--pierre); transition: transform .2s, box-shadow .2s; }
+  .card:hover, .card:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 30px rgb(43 49 54 / .12); }
+  .card:focus-visible { outline: 3px solid var(--bordeaux); outline-offset: 3px; }
+  .card .band { height: 140px; background-size: cover; background-position: right bottom; }
+  .card .body { padding: 20px 24px 24px; }
+  .card h2 { font: 400 1.5rem/1.25 "Bree Serif", Georgia, serif; margin: 0 0 6px; }
+  .card p { margin: 0 0 16px; color: var(--ardoise-mer); }
+  .card .go { font-weight: 600; color: var(--bordeaux); }
+  .a h2 { color: var(--iroise); } .a .band { background-color: #e6eef2; background-image: url("illustration-footer-A.svg"); }
+  .b h2 { color: var(--bordeaux); } .b .band { background-color: var(--pierre); background-image: url("illustration-footer-B.svg"); }
+  .note { background: var(--blanc); border-left: 4px solid var(--bordeaux); padding: 16px 20px; border-radius: 0 8px 8px 0; color: var(--ardoise-mer); font-size: .95rem; }
+  footer { margin-top: 56px; }
+  footer img { display: block; width: 100%; height: auto; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="logo.svg" alt="Le Petit Coin de Paradis">
+      <h1>Deux pistes pour la nouvelle identité du site</h1>
+      <p class="lead">Un bout de Bretagne, du bout du monde. Voici deux directions graphiques pour la refonte. Elles gardent toutes les deux votre logo et l'esprit de l'illustration du phare, redessinée autour du phare de Kermorvan.</p>
+    </header>
+
+    <div class="grid">
+      <a class="card a" href="planche-A.html">
+        <div class="band" role="img" aria-label="Illustration piste Iroise"></div>
+        <div class="body">
+          <h2>Piste A — Iroise</h2>
+          <p>Bleus profonds de la mer d'Iroise, blanc écume, accent framboise. Une ambiance maritime, claire et éditoriale.</p>
+          <span class="go">Voir la planche →</span>
+        </div>
+      </a>
+      <a class="card b" href="planche-B.html">
+        <div class="band" role="img" aria-label="Illustration piste Comptoir"></div>
+        <div class="body">
+          <h2>Piste B — Comptoir</h2>
+          <p>Les couleurs de la vraie boutique : bordeaux de l'enseigne, pierre, ardoise et kraft. Chaleureux, artisanal, ancré au Conquet.</p>
+          <span class="go">Voir la planche →</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="note">Document de travail, pas encore le site final. Les photos viennent du site actuel et seront remplacées après un shooting. Les textes et les prix sont des exemples.</p>
+  </div>
+  <footer><img src="illustration-footer-B.svg" alt=""></footer>
+</body>
+</html>
