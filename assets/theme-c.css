@@ -1,0 +1,71 @@
+/* Le Petit Coin de Paradis · thème de la piste C « Continuité ».
+   Ce fichier ne contient que des tokens. Les composants (site.css) n'utilisent que les variables sémantiques
+   définies ici : pour comparer avec la piste A ou B, il suffit de fournir un theme-a.css ou theme-b.css
+   avec les mêmes noms de variables (valeurs dans docs/04-direction-artistique/README.md). */
+:root {
+  /* Palette C (contrastes vérifiés par contrast-check.py) */
+  --marine: #002941;
+  --bleu: #024972;
+  --bleu-vague: #0069A5;
+  --cyan: #2FB2D1;
+  --cyan-clair: #DFF3F8;
+  --etagere: #F3F4F1;
+  --blanc: #FFFFFF;
+  --rouge-nappe: #B0281E;
+  --rouge-fleche: #6E1A0E;
+  --poutre: #3B2416;
+  --bois: #A0703F;
+  --ardoise: #50565C;
+  --rouge-logo: #FF003E;
+
+  /* Rôles sémantiques */
+  --bg: var(--blanc);
+  --surface: var(--blanc);
+  --surface-alt: var(--etagere);
+  --surface-tint: var(--cyan-clair);
+  --ink: var(--marine);
+  --ink-2: var(--ardoise);
+  --heading: var(--marine);
+  --link: var(--bleu);
+  --focus: var(--bleu);
+  --primary: var(--bleu);
+  --primary-hover: var(--marine);
+  --on-primary: var(--blanc);
+  --accent: var(--rouge-nappe);
+  --accent-hover: var(--rouge-fleche);
+  --on-accent: var(--blanc);
+  --price: var(--rouge-nappe);
+  --kicker: var(--rouge-nappe);
+  --meta: var(--poutre);
+  --line: rgba(0, 41, 65, .14);
+  --field-border: var(--ardoise);
+  --picto: var(--bleu);
+  --sep: var(--bleu-vague);
+  --card-accent: var(--cyan);
+  --topbar-bg: var(--marine);
+  --topbar-ink: var(--cyan-clair);
+  --demo-bg: var(--rouge-nappe);
+  --demo-ink: var(--blanc);
+  --hero-solid: var(--marine);
+  --hero-overlay: 0 41 65;
+  --on-hero: var(--blanc);
+  --on-hero-2: var(--cyan-clair);
+  --hero-hello: var(--cyan);
+  --trisk-hero: var(--blanc);
+  --foot-bg: var(--bleu-vague);     /* = bas de illustration-footer-C.svg */
+  --foot-ink: var(--blanc);
+  --foot-head: var(--blanc);
+  --foot-line: rgba(255, 255, 255, .3);
+
+  /* Typographie */
+  --f-display: 'Vidaloka', 'Didot', Georgia, serif;
+  --f-text: 'Open Sans', 'Segoe UI', system-ui, sans-serif;
+  --display-weight: 400;
+
+  /* Formes */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --shadow-1: 0 0 0 1px rgba(0, 41, 65, .08), 0 6px 18px -10px rgba(0, 41, 65, .25);
+  --shadow-2: 0 0 0 1px rgba(0, 41, 65, .1), 0 16px 30px -14px rgba(0, 41, 65, .32);
+}

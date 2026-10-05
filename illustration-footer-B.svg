@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" width="1600" height="400" preserveAspectRatio="xMidYMax slice" role="img" aria-labelledby="titre desc">
+<title id="titre">L'Iroise, les goélands et le phare de Kermorvan</title>
+<desc id="desc">Illustration de pied de page, piste B « Comptoir » : vagues de la mer d'Iroise, trois goélands en vol, île basse à l'horizon (Molène, Ouessant) et le phare de Kermorvan, tour carrée blanche reliée à la côte par un pont de pierre.</desc>
+<!-- Le Petit Coin de Paradis · direction artistique 04 · aucun texte incrusté : les mentions passent en HTML.
+     Calques animables : #mer-horizon, #vague-1, #ecume, #vague-2, #vague-avant, #goelands, #faisceau.
+     Le bas de l'image (#2B3136) est la couleur du pied de page : l'illustration s'y fond sans raccord. -->
+<defs>
+<symbol id="hermine" viewBox="0 0 20 30"><circle cx="10" cy="3" r="2.6"/><circle cx="4.6" cy="7.4" r="2.6"/><circle cx="15.4" cy="7.4" r="2.6"/><path d="M10 9.5c-.6 5-1.8 10.6-6.6 18.2l3.9-1.6L10 30l2.7-3.9 3.9 1.6C11.8 20.1 10.6 14.5 10 9.5z"/></symbol>
+<symbol id="goeland-haut" viewBox="0 0 140 80" overflow="visible"><path fill="#F7F1E6" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M80 44c4-16 16-30 32-38-8 14-14 26-18 38z"/><path fill="#F7F1E6" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M62 46C56 30 40 14 18 4c22 6 46 18 68 40z"/><path fill="#2B3136" d="M18 4c8 2 16 6 24 11l-7 4C30 13 25 8 18 4z"/><path fill="#F7F1E6" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M30 54C48 44 78 38 102 39c12-1 20 3 20 8-2 7-12 10-24 10-24 3-48 1-68-3zM30 54l-16-6 4 10z"/><path fill="#C9A47A" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M121 47l13 2-13 3z"/><circle cx="113" cy="46" r="2" fill="#2B3136"/></symbol><symbol id="goeland-bas" viewBox="0 0 140 80" overflow="visible"><path fill="#F7F1E6" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M84 44c8-10 18-16 28-18-8 8-14 14-16 20z"/><path fill="#F7F1E6" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M30 54C48 44 78 38 102 39c12-1 20 3 20 8-2 7-12 10-24 10-24 3-48 1-68-3zM30 54l-16-6 4 10z"/><path fill="#C9A47A" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M121 47l13 2-13 3z"/><circle cx="113" cy="46" r="2" fill="#2B3136"/><path fill="#F7F1E6" stroke="#2B3136" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M64 50c-2 12-10 22-24 28 20-4 36-14 46-26z"/><path fill="#2B3136" d="M40 78c6-3 12-6 16-10l4 4c-6 3-12 5-20 6z"/></symbol>
+</defs>
+<style>
+@media (prefers-reduced-motion: no-preference) {
+  #faisceau { animation: eclat 5s ease-in-out infinite; }
+  #vague-1 { animation: houle 9s ease-in-out infinite alternate; }
+  #vague-2 { animation: houle 7s ease-in-out infinite alternate-reverse; }
+  #goelands use { animation: plane 6s ease-in-out infinite alternate; }
+  #goelands g use { animation-delay: -2s; }
+  #goelands > use:last-child { animation-delay: -4s; }
+}
+@keyframes eclat { 0%, 70%, 100% { opacity: .12; } 82% { opacity: .55; } }
+@keyframes houle { from { transform: translateY(0); } to { transform: translateY(5px); } }
+@keyframes plane { from { transform: translateY(0); } to { transform: translateY(-6px); } }
+</style>
+
+<g id="mer-horizon">
+<path fill="#C9BBA6" d="M640 222c30-8 70-12 110-11 26 1 44-4 62-6 30-3 60 4 82 12 8 3 14 5 20 5H640z"/>
+<path fill="#C9BBA6" d="M1000 222c10-6 26-9 44-8 12 1 20 4 28 8z"/>
+<path fill="#E6DCCB" d="M-10 400V220h1620v180z"/>
+</g>
+<path id="faisceau" fill="#FFFDF9" opacity=".18" d="M1320 59L600 120 610 205z"/>
+<g id="vague-1">
+<path fill="#8C9DA3" d="M-10 400V214c70-26 150-34 222-14 40 11 62 26 92 14 28-11 30-46 66-64 40-20 92-8 112 22 12 18 10 38-6 46-12 6-26 0-24-12 1-8 10-12 16-8-2-14-20-22-38-16-26 8-34 40-18 62 18 24 58 30 104 22 70-12 130-34 220-40 70-5 120 10 180 28 60 18 120 22 180 8 50-12 96-34 150-40 70-8 130 8 184 30 34 14 60 22 88 24H1610V400z"/>
+</g>
+<g id="ecume">
+<path fill="#F7F1E6" d="M-10 400V290c80-30 170-40 260-24 70 12 120 46 170 70 20 10 40 12 54 2-6-30 14-62 52-78 50-22 120-18 190 0 80 20 150 30 230 18 70-10 120-34 190-40 60-5 110 6 150 18 50 15 90 18 124 12H1610V400z"/>
+</g>
+<g id="vague-2">
+<path fill="#4A5F69" d="M-10 400V304c80-28 170-36 256-20 70 13 118 48 170 72 30 14 60 12 74-6-20-26-4-60 40-76 48-18 116-12 186 6 80 20 150 28 230 16 70-11 120-34 190-38 60-4 110 8 150 20 50 14 90 16 124 10H1610V400z"/>
+</g>
+<g id="kermorvan">
+<path fill="#B39189" d="M1490 400V262c18-10 34-14 50-12 22 2 40-6 70-4V400z"/>
+<path fill="#9E7F79" d="M1490 262c18-10 34-14 50-12 22 2 40-6 70-4v10c-28-1-48 6-70 4-16-1-32 3-50 12z" opacity=".55"/>
+<path fill="#C9A7A0" d="M1386 282l112-14v34h-12a19 19 0 0 0-38 0h-8a19 19 0 0 0-38 0h-16z"/>
+<path fill="#9E7F79" d="M1386 282l112-14v5l-112 14z" opacity=".6"/>
+<path fill="#C9A7A0" d="M1196 400c0-40 14-82 46-98 26-13 60-12 96-14 36-2 58 6 70 26 14 22 18 54 18 86z"/>
+<path fill="#9E7F79" d="M1338 288c36-2 58 6 70 26 14 22 18 54 18 86h-40c4-30 0-62-16-82-10-12-20-20-32-30z" opacity=".55"/>
+<path fill="#DCCDB2" d="M1238 300v-36h62v36z"/>
+<path fill="#FFFDF9" d="M1238 300v-36h40v36z"/>
+<path fill="#7A1F33" d="M1232 266l24-22h30l20 22z"/>
+<rect x="1246" y="276" width="9" height="14" rx="1" fill="#4A5F69"/>
+<use href="#hermine" x="1262" y="274" width="8" height="12" fill="#2B3136"/>
+<use href="#hermine" x="1284" y="274" width="8" height="12" fill="#2B3136" opacity=".7"/>
+<g id="phare">
+<path fill="#DCCDB2" d="M1344 122h16v178h-16z"/>
+<path fill="#FFFDF9" d="M1300 122h44v178h-44z"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 140h16"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 162h16"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 184h16"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 206h16"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 228h16"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 250h16"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 272h16"/>
+<path stroke="#9E7F79" stroke-width="1" opacity=".35" d="M1344 294h16"/>
+<rect x="1310" y="140" width="7" height="15" rx="1" fill="#4A5F69"/>
+<rect x="1326" y="186" width="7" height="15" rx="1" fill="#4A5F69"/>
+<rect x="1310" y="232" width="7" height="15" rx="1" fill="#4A5F69"/>
+<path fill="#FFFDF9" d="M1292 112h76v8h-76z"/>
+<path fill="#DCCDB2" d="M1292 120h76v2h-76z"/>
+<path fill="#FFFDF9" d="M1295 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1304 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1313 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1322 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1331 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1340 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1349 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1358 122h5v6l-1.5 2h-2l-1.5-2z"/>
+<path fill="#FFFDF9" d="M1294 92h72v4h-72z"/>
+<path fill="#FFFDF9" d="M1296 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1304 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1312 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1320 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1328 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1336 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1344 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1352 96h4v16h-4z"/>
+<path fill="#FFFDF9" d="M1360 96h4v16h-4z"/>
+<path fill="#DCCDB2" d="M1315.0 78h30v14h-30z"/>
+<path fill="#FFFDF9" d="M1313.0 76h34v4h-34z"/>
+<path fill="#FFFDF9" d="M1318.0 54h24v22h-24z"/>
+<path fill="#7A1F33" opacity=".9" d="M1325.0 59h10v12h-10z" id="feu"/>
+<path stroke="#2B3136" stroke-width="1.6" d="M1318.0 54v22"/>
+<path stroke="#2B3136" stroke-width="1.6" d="M1326.0 54v22"/>
+<path stroke="#2B3136" stroke-width="1.6" d="M1334.0 54v22"/>
+<path stroke="#2B3136" stroke-width="1.6" d="M1342.0 54v22"/>
+<path stroke="#2B3136" stroke-width="1.6" d="M1317.0 76h26"/>
+<path fill="#2B3136" d="M1315.0 54c0-10 7-16 15-16s15 6 15 16z"/>
+<circle cx="1330.0" cy="34" r="4" fill="#2B3136"/>
+<path stroke="#2B3136" stroke-width="1.6" d="M1330.0 30v-14"/>
+<path fill="#7A1F33" d="M1331.0 16l20 5-20 5z"/>
+</g>
+</g>
+<g id="goelands">
+<use href="#goeland-haut" x="430" y="150" width="140" height="80"/>
+<g transform="translate(872 96) scale(-1 1)"><use href="#goeland-haut" width="112" height="64"/></g>
+<use href="#goeland-haut" x="930" y="196" width="96" height="55"/>
+</g>
+<g id="vague-avant">
+<path fill="#F7F1E6" d="M-10 400V362c90-18 190-20 300-6 80 10 140 12 210 2 60-9 110-26 180-28 80-2 140 18 220 26 90 9 170 0 250-14 70-12 120-18 190-14 70 4 130 16 170 22H1610V400z"/>
+<path fill="#2B3136" d="M-10 400V370c90-18 190-20 300-6 80 10 140 12 210 2 60-9 110-26 180-28 80-2 140 18 220 26 90 9 170 0 250-14 70-12 120-18 190-14 70 4 130 16 170 22H1610V400z"/>
+</g>
+</svg>
