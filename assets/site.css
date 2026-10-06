@@ -3,7 +3,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.6 var(--f-text); overflow-x: hidden; }
+body { min-height: 100vh; display: flex; flex-direction: column; margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.6 var(--f-text); overflow-x: hidden; }
 img, svg { max-width: 100%; }
 img { height: auto; }
 h1, h2, h3 { font-family: var(--f-display); font-weight: var(--display-weight); color: var(--heading); line-height: 1.15; margin: 0 0 .5em; text-wrap: balance; letter-spacing: .005em; }
@@ -227,7 +227,7 @@ a { color: var(--link); text-underline-offset: .2em; }
 
 /* ---------- Pied de page ---------- */
 .site-footer { margin-top: clamp(32px, 5vw, 64px); }
-.site-footer .illus { display: block; width: 100%; height: clamp(150px, 26vw, 420px); object-fit: cover; object-position: 84% 100%; margin-bottom: -1px; }
+.site-footer .illus { display: block; width: 100%; height: auto; margin-bottom: -1px; }
 .foot { background: var(--foot-bg); color: var(--foot-ink); padding: 8px 0 32px; }
 .foot a { color: var(--foot-ink); }
 .foot-top { text-align: center; padding-bottom: 28px; border-bottom: 1px solid var(--foot-line); margin-bottom: 28px; }
@@ -240,3 +240,10 @@ a { color: var(--link); text-underline-offset: .2em; }
 .foot .small { color: var(--foot-ink); opacity: .9; }
 .kenavo { font-family: var(--f-display); margin-top: 12px; }
 .legal { border-top: 1px solid var(--foot-line); margin-top: 28px; padding-top: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: .85rem; }
+
+/* Le pied de page reste en bas sur les pages courtes */
+main { flex: 1 0 auto; }
+.site-footer { flex-shrink: 0; }
+/* Photo absente (étiquette d'un autre commerce) */
+.ph-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; aspect-ratio: 1; color: var(--primary); font-size: .85rem; font-weight: 600; }
+.ph-empty .picto { width: 40px; height: 40px; color: var(--sep); }
