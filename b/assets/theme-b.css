@@ -1,0 +1,250 @@
+/* Le Petit Coin de Paradis · thème de la piste B « Comptoir » : la devanture devenue site.
+   Enseigne bordeaux, lin et grain kraft, ardoise du sol, étiquettes découpées, ficelle, tampon.
+   Partie 1 : tokens (mêmes noms que theme-c.css). Partie 2 : surcharges de composants. */
+:root {
+  --bordeaux: #7A1F33;
+  --menuiserie: #561820;
+  --rose-volet: #D9A0A6;
+  --rose-poudre: #F4E1E1;
+  --pierre: #DCCDB2;
+  --lin: #F7F1E6;
+  --lin-fonce: #EFE5D2;
+  --blanc: #FFFDF9;
+  --ardoise: #2B3136;
+  --ardoise-mer: #4A5F69;
+  --kraft: #875A2E;
+  --kraft-sombre: #6B4521;
+  --kraft-clair: #C9A47A;
+  --rouge-logo: #FF003E;
+  /* alias lus par shop.css */
+  --marine: var(--ardoise);
+  --cyan-clair: var(--rose-poudre);
+  --etagere: var(--lin);
+  --bois: var(--kraft);
+
+  --bg: var(--lin);
+  --surface: var(--blanc);
+  --surface-alt: var(--lin-fonce);
+  --surface-tint: var(--rose-poudre);
+  --ink: var(--ardoise);
+  --ink-2: var(--ardoise-mer);
+  --heading: var(--bordeaux);
+  --link: var(--bordeaux);
+  --focus: var(--bordeaux);
+  --primary: var(--bordeaux);
+  --primary-hover: var(--menuiserie);
+  --on-primary: var(--blanc);
+  --accent: var(--kraft);
+  --accent-hover: var(--kraft-sombre);
+  --on-accent: var(--blanc);
+  --price: var(--bordeaux);
+  --kicker: var(--kraft);
+  --meta: var(--ardoise-mer);
+  --line: rgba(43, 49, 54, .16);
+  --field-border: var(--ardoise-mer);
+  --picto: var(--bordeaux);
+  --sep: var(--kraft);
+  --card-accent: var(--kraft-clair);
+  --topbar-bg: var(--bordeaux);
+  --topbar-ink: var(--rose-poudre);
+  --demo-bg: var(--ardoise);
+  --demo-ink: var(--lin);
+  --hero-solid: var(--rose-poudre);
+  --hero-overlay: 244 225 225;
+  --on-hero: var(--ardoise);
+  --on-hero-2: var(--ardoise);
+  --hero-hello: var(--bordeaux);
+  --trisk-hero: var(--bordeaux);
+  --foot-bg: #2B3136;               /* = bas de illustration-footer-B.svg */
+  --foot-ink: var(--lin);
+  --foot-head: var(--rose-poudre);
+  --foot-line: rgba(220, 205, 178, .3);
+
+  --f-display: 'Bree Serif', 'Rockwell', 'Roboto Slab', Georgia, serif;
+  --f-text: 'Figtree', 'Segoe UI', system-ui, sans-serif;
+  --display-weight: 400;
+
+  --r-xs: 4px;
+  --r-sm: 4px;
+  --r-md: 6px;
+  --shadow-1: 0 0 0 1px var(--pierre);
+  --shadow-2: 0 0 0 1px var(--kraft), 3px 3px 0 var(--kraft-clair);
+
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .18 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+  --slats: repeating-linear-gradient(90deg, var(--rose-volet) 0 9px, var(--rose-poudre) 9px 13px);
+}
+
+/* ================= Fond, titres ================= */
+body { background-color: var(--bg); background-image: var(--grain); font-size: 1.0625rem; font-weight: 400; }
+h1, h2, h3 { letter-spacing: 0; line-height: 1.15; }
+.sec-head h2, .story-text h2 { position: relative; padding-bottom: .55em; }
+.sec-head h2::after { content: ""; display: block; width: 84px; height: 6px; margin: .45em auto 0; background: radial-gradient(circle, var(--kraft) 2px, transparent 2.5px) 0 50% / 12px 6px repeat-x; }
+.story-text h2::after { content: ""; display: block; width: 84px; height: 6px; margin-top: .45em; background: radial-gradient(circle, var(--kraft) 2px, transparent 2.5px) 0 50% / 12px 6px repeat-x; }
+.kicker { display: inline-block; background: var(--blanc); color: var(--kraft-sombre); border: 1px dashed var(--kraft); border-radius: 3px; padding: 3px 10px; font-size: .78rem; font-weight: 700; letter-spacing: .12em; }
+.sec-head .kicker { transform: rotate(-2deg); }
+.section-alt { background-color: var(--lin-fonce); background-image: var(--grain); border-block: 1px solid var(--pierre); }
+a { text-decoration-thickness: 1.5px; }
+
+/* ================= Barres et en-tête ================= */
+.demo-bar { letter-spacing: .01em; }
+.demo-bar a { color: var(--rose-poudre); }
+.topbar { border-bottom: 3px solid var(--menuiserie); }
+.topbar a { color: var(--blanc); }
+.topbar .picto { color: var(--rose-volet); }
+.site-header { background: var(--blanc); border-bottom: 0; position: relative; }
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: var(--slats); border-top: 1px solid var(--pierre); border-bottom: 1px solid var(--pierre); }
+.head-row { padding-top: 16px; padding-bottom: 16px; }
+.search { border-radius: var(--r-xs); border-width: 2px; border-color: var(--ardoise-mer); background: var(--lin); }
+.search button { background: var(--bordeaux); color: var(--blanc); width: 52px; }
+.search button:hover { background: var(--menuiserie); }
+.cart { padding: 0 14px; border: 2px solid var(--bordeaux); border-radius: var(--r-xs); color: var(--bordeaux); box-shadow: 0 2px 0 var(--bordeaux); transition: transform .15s, box-shadow .15s; }
+.cart:hover { transform: translateY(1px); box-shadow: 0 1px 0 var(--bordeaux); background: var(--rose-poudre); }
+.cart-n { border-radius: 3px; background: var(--bordeaux); }
+.nav-desk { border-top: 1px solid var(--pierre); background: var(--lin); margin-bottom: 8px; }
+.nav-desk a { font-size: .95rem; text-transform: none; padding: 13px 12px 10px; border-bottom: 4px solid transparent; }
+.nav-desk a:hover, .nav-desk a[aria-current] { color: var(--bordeaux); border-bottom-color: var(--rose-volet); background: transparent; }
+.nav-desk a[aria-current] { border-bottom-color: var(--bordeaux); }
+.menu { margin-bottom: 8px; }
+.menu summary { background: var(--lin); border-top: 1px solid var(--pierre); }
+
+/* ================= Boutons : effet tampon ================= */
+.btn { border-radius: var(--r-xs); border-width: 2px; font-weight: 700; letter-spacing: .01em; transition: transform .12s, box-shadow .12s, background-color .15s, color .15s; }
+.btn-primary { border-color: var(--bordeaux); box-shadow: 0 2px 0 var(--menuiserie); }
+.btn-primary:hover { border-color: var(--menuiserie); }
+.btn-accent { border-color: var(--kraft); box-shadow: 0 2px 0 var(--kraft-sombre); }
+.btn-accent:hover { border-color: var(--kraft-sombre); }
+.btn-secondary { background: var(--blanc); border-color: var(--bordeaux); box-shadow: 0 2px 0 var(--bordeaux); }
+.btn-secondary:hover { background: var(--rose-poudre); }
+.btn-ghost-light { background: var(--blanc); color: var(--bordeaux); border-color: var(--bordeaux); box-shadow: 0 2px 0 var(--bordeaux); }
+.btn-ghost-light:hover { background: var(--lin); }
+.btn:hover { transform: translateY(1px); }
+.btn:active { transform: translateY(2px); box-shadow: none; }
+.btn[disabled], .btn:disabled { opacity: 1; background: var(--pierre); border-color: var(--ardoise-mer); color: var(--ardoise); box-shadow: none; transform: none; }
+.btn:focus-visible, .cart:focus-visible { outline-offset: 4px; }
+
+/* ================= Séparateur : ficelle ================= */
+.sep-trisk { color: var(--kraft); }
+.sep-trisk span { border-top: 3px dotted var(--kraft); opacity: .8; }
+.sep-trisk .trisk { color: var(--bordeaux); }
+
+/* ================= Hero : panneau d'enseigne + photo encadrée ================= */
+.hero { background: var(--rose-poudre) var(--grain); display: flex; flex-direction: column; border-bottom: 1px solid var(--pierre); }
+.hero-img { order: 0; border: 0; height: clamp(260px, 62vw, 460px); object-position: 30% 50%; }
+.hero-text { background: transparent; color: var(--ardoise); text-align: left; padding: 30px 0 38px; position: relative; }
+.hero-text .wrap { align-items: flex-start; }
+.hero-text::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: var(--slats); }
+.hero-text .wrap { padding-left: calc(clamp(16px, 4vw, 40px) + 14px); }
+.trisk-hero { filter: none; width: 56px; height: 56px; }
+.hello { font-size: 1.2rem; color: var(--bordeaux); }
+.hello span { font-family: var(--f-text); font-weight: 600; font-size: .95rem; color: var(--ardoise); }
+.hero h1 { color: var(--bordeaux); text-shadow: none; font-size: clamp(2.5rem, 1.6rem + 4vw, 4rem); line-height: 1.08; }
+.hero .desc { color: var(--ardoise); margin: 0 0 1.4em; max-width: 42ch; }
+.hero .btn-row { justify-content: flex-start; }
+@media (min-width: 900px) {
+  .hero { display: grid; grid-template-columns: minmax(420px, .78fr) 1.22fr; min-height: 620px; }
+  .hero-img { order: 2; height: 100%; min-height: 620px; width: 100%; object-position: 28% 50%; }
+  .hero-text { order: 1; position: relative; inset: auto; background: transparent; padding: 56px 0 56px; display: flex; align-items: center; }
+  .hero-text .wrap { padding-left: calc(clamp(16px, 4vw, 40px) + 22px); padding-right: 32px; max-width: none; margin: 0; width: 100%; }
+  .hero-text::before { width: 22px; }
+  .trisk-hero { width: 64px; height: 64px; }
+}
+.hero-text::after { content: "Depuis la rue Poncelin"; position: absolute; right: 16px; top: 16px; background: var(--kraft-clair); color: var(--ardoise); font-weight: 700; font-size: .78rem; padding: 6px 14px 6px 22px; clip-path: polygon(0 50%, 12px 0, 100% 0, 100% 100%, 12px 100%); transform: rotate(-3deg); }
+.reassure-bar { background: var(--blanc); border-bottom: 1px solid var(--pierre); }
+.reassure li .picto { color: var(--bordeaux); }
+.reassure b { color: var(--bordeaux); }
+
+/* ================= Cartes produits : étiquettes de comptoir ================= */
+.card, .tile, .coffret, .panel, .cart-line, .box-card { background: var(--blanc); border-radius: var(--r-md); box-shadow: none; border: 1px solid var(--pierre); }
+.card { transition: border-color .2s, box-shadow .2s, transform .2s; }
+.card:hover, .tile:hover { transform: none; border-color: var(--bordeaux); box-shadow: 3px 3px 0 var(--rose-volet); }
+.ph { background: var(--lin-fonce); border-bottom: 2px dotted var(--kraft); }
+.ph img { transition: transform .35s; }
+.card:hover .ph img { transform: scale(1.03); }
+.ph { overflow: hidden; }
+.card .bd { border-top: 0; padding-top: 12px; }
+.card .cat { color: var(--kraft-sombre); font-size: .72rem; letter-spacing: .1em; }
+.card .name { font-weight: 600; }
+.price { font-size: 1.4rem; }
+.badge { background: var(--kraft-clair); color: var(--ardoise); border-radius: 0; padding: 5px 12px 5px 20px; clip-path: polygon(0 50%, 11px 0, 100% 0, 100% 100%, 11px 100%); box-shadow: none; transform: rotate(-3deg); left: 6px; top: 12px; }
+.badge .picto { color: var(--ardoise); }
+.tag { border-radius: 0; background: var(--kraft-clair); color: var(--ardoise); clip-path: polygon(0 50%, 10px 0, 100% 0, 100% 100%, 10px 100%); padding-left: 18px; }
+.tag-cyan { background: var(--kraft-clair); }
+
+/* ================= Rayons ================= */
+.tile { border-radius: var(--r-md); }
+.tile-img { border-bottom: 2px dotted var(--kraft); display: block; overflow: hidden; }
+.tile-img img { transition: transform .4s; }
+.tile:hover .tile-img img { transform: scale(1.04); }
+.tile-bd { border-top: 0; background: var(--blanc); }
+.tile-name { color: var(--bordeaux); }
+.tile-n { color: var(--ardoise-mer); }
+
+/* ================= Coffrets, étapes, présentation ================= */
+.coffret { position: relative; }
+.coffret-bd .num { border-radius: 4px; background: var(--bordeaux); color: var(--blanc); width: 40px; height: 40px; transform: rotate(-4deg); }
+.coffret:not(.coffret-steps)::after { content: "Composé à la main"; position: absolute; left: 16px; top: 16px; width: 92px; height: 92px; display: grid; place-items: center; text-align: center; padding: 10px; font: 400 .92rem/1.1 var(--f-display); color: var(--bordeaux); background: rgba(255, 253, 249, .94); border: 2px solid var(--bordeaux); border-radius: 50%; outline: 1px solid var(--bordeaux); outline-offset: -7px; transform: rotate(-8deg); }
+.steps li { background: var(--lin); border: 1px dashed var(--kraft); border-radius: var(--r-xs); }
+.story-photo img { border-radius: var(--r-md); border: 8px solid var(--blanc); outline: 1px solid var(--pierre); box-shadow: 6px 6px 0 var(--pierre); }
+.story-photo figcaption { background: var(--kraft-clair); color: var(--ardoise); border-radius: 0; padding: 7px 14px 7px 22px; clip-path: polygon(0 50%, 12px 0, 100% 0, 100% 100%, 12px 100%); box-shadow: none; left: 20px; bottom: 26px; transform: rotate(-2deg); font-weight: 600; }
+.story-photo figcaption .picto { color: var(--ardoise); }
+.sign { color: var(--bordeaux); }
+
+/* ================= Catégorie, fiche ================= */
+.cat-head { background: var(--rose-poudre) var(--grain); border-bottom: 1px solid var(--pierre); position: relative; padding-bottom: 28px; }
+.cat-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--slats); }
+.crumbs, .crumbs a { color: var(--ardoise); }
+.subnav a { border-radius: var(--r-xs); background: var(--blanc); box-shadow: inset 0 0 0 1.5px var(--bordeaux), 0 2px 0 var(--bordeaux); }
+.subnav a:hover { background: var(--lin); }
+.subnav a[aria-current] { background: var(--bordeaux); }
+.sort select, .variant select, .field input, .field textarea, .qty input, .msg-grid textarea { border-width: 2px; border-radius: var(--r-xs); background: var(--blanc); }
+.field input:focus, .field textarea:focus, .qty input:focus, .sort select:focus, .variant select:focus, .msg-grid textarea:focus { outline: 3px solid var(--bordeaux); outline-offset: 2px; border-color: var(--bordeaux); }
+.product-photo { background: var(--blanc); border: 8px solid var(--blanc); outline: 1px solid var(--pierre); border-radius: var(--r-xs); box-shadow: 6px 6px 0 var(--pierre); }
+.product-info .cat a { color: var(--kraft-sombre); }
+.price-lg { font-size: 2.2rem; }
+.buy { border-top: 2px dotted var(--kraft); border-bottom: 2px dotted var(--kraft); }
+.product-note { background: var(--blanc); border: 1px dashed var(--kraft); border-radius: var(--r-xs); }
+.panel { border-top: 4px solid var(--bordeaux); }
+.hours th, .hours td { border-bottom: 1px dotted var(--kraft); }
+.hours th { color: var(--bordeaux); }
+.contact-photo img { border: 8px solid var(--blanc); outline: 1px solid var(--pierre); border-radius: var(--r-xs); box-shadow: 6px 6px 0 var(--pierre); }
+.phone { color: var(--bordeaux); }
+
+/* ================= Panier, coffret à composer ================= */
+.cart-line { border-radius: var(--r-md); }
+.cl-qty, .stepper-qty { border-radius: var(--r-xs); border-width: 2px; }
+.cl-qty button, .stepper-qty button { border-radius: 0; }
+.cl-qty button:hover, .stepper-qty button:hover:not(:disabled) { background: var(--rose-poudre); }
+.cart-foot { background: var(--blanc); border: 1px dashed var(--kraft); border-radius: var(--r-xs); }
+.stepper li { border-radius: var(--r-xs); background: var(--blanc); border: 1px solid var(--pierre); color: var(--ardoise); }
+.stepper li::before { border-radius: 3px; background: var(--lin); }
+.stepper li[aria-current="step"] { background: var(--bordeaux); color: var(--blanc); border-color: var(--bordeaux); }
+.stepper li.done::before { border-radius: 3px; }
+.box-card { border-top: 4px solid var(--bordeaux); }
+.tip { background: var(--blanc); border: 1px dashed var(--kraft); border-radius: var(--r-xs); }
+.filters button { border-radius: var(--r-xs); border-width: 2px; background: var(--blanc); box-shadow: 0 2px 0 var(--bordeaux); }
+.filters button[aria-pressed="true"] { background: var(--bordeaux); color: var(--blanc); }
+.summary { border-top: 4px solid var(--kraft); border: 1px solid var(--kraft); border-top-width: 4px; box-shadow: 4px 4px 0 var(--pierre); border-radius: var(--r-md); }
+progress.gauge { border-radius: 3px; background: var(--pierre); height: 14px; }
+progress.gauge::-webkit-progress-bar { background: var(--pierre); }
+.card-preview { background: var(--blanc); border-color: var(--kraft); border-radius: var(--r-xs); }
+.card.pick.dim { opacity: .6; }
+.toast { background: var(--ardoise); border-radius: var(--r-xs); box-shadow: 4px 4px 0 var(--kraft-clair); }
+.toast a { color: var(--rose-poudre); }
+
+/* ================= Pied de page ================= */
+.site-footer { margin-top: clamp(32px, 5vw, 64px); }
+.foot { background: var(--ardoise); }
+.foot-top { border-bottom: 2px dotted rgba(201, 164, 122, .55); }
+.trisk-foot { color: var(--rose-poudre); }
+.baseline { color: var(--rose-poudre); }
+.foot h2 { font-family: var(--f-display); color: var(--rose-poudre); border-bottom: 1px dashed rgba(201, 164, 122, .6); padding-bottom: .35em; }
+.foot a { text-decoration-thickness: 1px; }
+.foot a:hover { color: var(--rose-poudre); }
+.foot a:focus-visible { outline-color: var(--rose-poudre); }
+.foot .picto { color: var(--pierre); }
+.legal { border-top: 1px solid var(--foot-line); }
+
+/* ================= Retouches ================= */
+.sec-head h2, .story-text h2 { padding-bottom: 0; }
+.coffret > img { max-height: none; }
+a[href^="tel:"] { white-space: nowrap; }
