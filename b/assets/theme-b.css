@@ -148,7 +148,9 @@ a { text-decoration-thickness: 1.5px; }
   .hero-text::before { width: 22px; }
   .trisk-hero { width: 64px; height: 64px; }
 }
-.hero-text::after { content: "Depuis la rue Poncelin"; position: absolute; right: 16px; top: 16px; background: var(--kraft-clair); color: var(--ardoise); font-weight: 700; font-size: .78rem; padding: 6px 14px 6px 22px; clip-path: polygon(0 50%, 12px 0, 100% 0, 100% 100%, 12px 100%); transform: rotate(-3deg); }
+/* Pas d'étiquette ni de triskell dans le hero de la piste B (retour client) */
+.hero-text::after { content: none; }
+.trisk-hero { display: none; }
 .reassure-bar { background: var(--blanc); border-bottom: 1px solid var(--pierre); }
 .reassure li .picto { color: var(--bordeaux); }
 .reassure b { color: var(--bordeaux); }
